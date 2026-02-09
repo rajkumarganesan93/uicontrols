@@ -1,4 +1,4 @@
-# @cargoez/uicontrols
+# @rajkumarganesan93/uicontrols
 
 A premium React + TypeScript UI component library with built‑in accessibility, validation, and theme‑aware styling.  
 Current release includes **Button** and **TextField** components.
@@ -8,15 +8,15 @@ Current release includes **Button** and **TextField** components.
 ## 📦 Installation
 
 ```bash
-npm install @cargoez/uicontrols
+npm install @rajkumarganesan93/uicontrols
 # or
-yarn add @cargoez/uicontrols
+yarn add @rajkumarganesan93/uicontrols
 
 🚀 Usage
 TextField Example
 
 import React, { useRef } from "react";
-import { TextField } from "@cargoez/uicontrols";
+import { TextField } from "@rajkumarganesan93/uicontrols";
 
 export default function LoginForm() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -38,7 +38,7 @@ export default function LoginForm() {
 Button Example
 
 import React from "react";
-import { Button } from "@cargoez/uicontrols";
+import { Button } from "@rajkumarganesan93/uicontrols";
 
 export default function SubmitButton() {
   return (
