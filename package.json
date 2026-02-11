@@ -1,11 +1,12 @@
 {
   "name": "@rajkumarganesan93/uicontrols",
-  "version": "0.0.12",
+  "version": "0.0.15",
   "type": "module",
   "private": false,
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "types/index.d.ts",
+  "style": "dist/uicontrols.css",
   "files": [
     "dist",
     "types"

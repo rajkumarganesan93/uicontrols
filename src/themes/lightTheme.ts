@@ -32,7 +32,7 @@ const LightTheme = {
       disabled: "#ffe0b2",
     },
     error: {
-      main: "#D32F2F", // darker red
+      main: "#D32F2F",
       dark: "#B71C1C",
       light: "#E57373",
       contrastText: "#ffffff",
@@ -50,8 +50,8 @@ const LightTheme = {
       paper: "#f5f5f5",
     },
     text: {
-      primary: "#000000", // black on white background
-      secondary: "#555555", // gray for less emphasis
+      primary: "#000000",
+      secondary: "#555555",
       disabled: "#999999",
     },
     divider: "#000000",
@@ -60,6 +60,17 @@ const LightTheme = {
       hover: "#e6f2fa",
       focus: "#cce6f5",
       disabled: "#f0f0f0",
+    },
+    grey: {
+      100: "#f5f5f5",
+      200: "#eeeeee",
+      300: "#e0e0e0",
+      400: "#bdbdbd",
+      500: "#9e9e9e",
+      600: "#757575",
+      700: "#616161",
+      800: "#424242",
+      900: "#212121",
     },
   },
   typography: {

@@ -50,8 +50,8 @@ const DarkTheme = {
       paper: "#1e1e1e",
     },
     text: {
-      primary: "#ffffff", // white on dark background
-      secondary: "#bbbbbb", // lighter gray
+      primary: "#ffffff",
+      secondary: "#bbbbbb",
       disabled: "#666666",
     },
     divider: "#ffffff",
@@ -60,6 +60,17 @@ const DarkTheme = {
       hover: "#333333",
       focus: "#444444",
       disabled: "#555555",
+    },
+    grey: {
+      100: "#1e1e1e",
+      200: "#2c2c2c",
+      300: "#3a3a3a",
+      400: "#4d4d4d",
+      500: "#616161",
+      600: "#757575",
+      700: "#9e9e9e",
+      800: "#bdbdbd",
+      900: "#e0e0e0",
     },
   },
   typography: {

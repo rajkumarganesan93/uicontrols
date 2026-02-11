@@ -11,7 +11,7 @@ export default defineConfig({
       // Entry point must be your root index.ts
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "uicontrols",
-      fileName: (format) => `uicontrols.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
       formats: ["es", "cjs"], // ensure both ES and CJS builds
     },
     rollupOptions: {

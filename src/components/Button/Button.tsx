@@ -45,21 +45,30 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const themeObj = useTheme();
     const palette = themeObj.palette[color];
 
-    const baseClasses = `
-      inline-flex items-center justify-center gap-2
-      rounded-lg font-semibold transition-all duration-200
-      focus:outline-none focus:ring-2 focus:ring-offset-2
-      ${fullWidth ? "w-full" : "w-auto"}
-      disabled:opacity-50 disabled:cursor-not-allowed
-    `;
-
-    const sizeClasses: Record<ButtonSize, string> = {
-      small: "px-3 py-1 text-sm",
-      medium: "px-4 py-2 text-base",
-      large: "px-6 py-3 text-lg",
+    // Base style applied to all buttons
+    const baseStyle: React.CSSProperties = {
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "0.5rem",
+      borderRadius: "0.5rem",
+      fontWeight: 600,
+      transition: "all 0.2s ease-in-out",
+      outline: "none",
+      cursor: disabled ? "not-allowed" : "pointer",
+      opacity: disabled ? 0.5 : 1,
+      width: fullWidth ? "100%" : "auto",
     };
 
-    const style: React.CSSProperties = (() => {
+    // Size styles
+    const sizeStyles: Record<ButtonSize, React.CSSProperties> = {
+      small: { padding: "0.25rem 0.75rem", fontSize: "0.875rem" },
+      medium: { padding: "0.5rem 1rem", fontSize: "1rem" },
+      large: { padding: "0.75rem 1.5rem", fontSize: "1.125rem" },
+    };
+
+    // Variant styles
+    const variantStyle: React.CSSProperties = (() => {
       switch (variant) {
         case "contained":
           return {
@@ -98,8 +107,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         onClick={onClick}
         disabled={disabled}
-        className={`${baseClasses} ${sizeClasses[size]}`}
-        style={style}
+        style={{ ...baseStyle, ...sizeStyles[size], ...variantStyle }}
       >
         {startIcon}
         {label}
