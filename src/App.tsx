@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Button, TextField } from "@rajkumarganesan93/uicontrols";
+import Button from "./components/Button/Button";
+import TextField from "./components/TextField/TextField";
 
 function App() {
   const [email, setEmail] = useState("");
