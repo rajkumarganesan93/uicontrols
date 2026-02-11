@@ -1,28 +1,24 @@
 {
   "name": "@rajkumarganesan93/uicontrols",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "type": "module",
   "private": false,
   "main": "dist/uicontrols.cjs.js",
   "module": "dist/uicontrols.es.js",
-  "types": "dist/index.d.ts",
+  "types": "types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b tsconfig.build.json && vite build",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest run",
     "tailwind:init": "tailwindcss init -p"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "react": ">=18",
-    "react-dom": ">=18"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -36,6 +32,7 @@
     "@storybook/addon-themes": "^10.2.7",
     "@storybook/addon-vitest": "^10.2.6",
     "@storybook/react-vite": "^10.2.6",
+    "@tailwindcss/vite": "^4.1.18",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^24.10.1",
@@ -67,5 +64,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/rajkumarganesan93/uicontrols.git"
+  },
+  "dependencies": {
+    "@rajkumarganesan93/uicontrols": "^0.0.8"
   }
 }

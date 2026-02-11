@@ -1,8 +1,10 @@
 import { createContext, useContext } from "react";
 import LightTheme from "../themes/lightTheme";
 
-export const ThemeContext = createContext(LightTheme);
+export type Theme = typeof LightTheme; // infer type from your theme object
 
-export function useTheme() {
+export const ThemeContext = createContext<Theme>(LightTheme);
+
+export function useTheme(): Theme {
   return useContext(ThemeContext);
 }
